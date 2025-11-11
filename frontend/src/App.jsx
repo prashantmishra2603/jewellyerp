@@ -10,7 +10,7 @@ import Reports from "./pages/Reports";
 import Inventory from "./pages/Inventory";
 import Purchase from "./pages/Purchase";
 import Suppliers from "./pages/Suppliers";
-import Girvi from "./pages/girvi";
+import Girvi from "./pages/Girvi";
 //import Settings from "./pages/Settings";
 
 function App() {
