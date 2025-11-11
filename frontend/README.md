@@ -1,16 +1,43 @@
-# React + Vite
+💎 Jewelry Shop ERP System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern ERP (Enterprise Resource Planning) web application designed for jewelry businesses to efficiently manage inventory, sales, purchases, customers, suppliers, girvi (pawn transactions), and analytics.
+Built with a clean and responsive interface to make business management easy, fast, and organized.
 
-Currently, two official plugins are available:
+🚀 Features
+🧾 Core Modules
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dashboard Overview – Quick insight into inventory, sales, customers, and suppliers.
 
-## React Compiler
+Inventory Management – Track jewelry items, categories, prices, and stock levels.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sales Module – Record and monitor daily sales with profit tracking.
 
-## Expanding the ESLint configuration
+Purchase Management – Manage jewelry purchases from different suppliers.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Customer Management – Maintain customer details and history.
+
+Supplier Management – Keep supplier contact and purchase information.
+
+Girvi (Pawn) System – Track pawned items with interest, value, and redemption status.
+
+Reports & Analytics – Interactive charts showing sales, profit, and performance trends.
+
+🖥️ Tech Stack
+
+Frontend:
+
+React.js
+
+Tailwind CSS
+
+Recharts (for analytics)
+
+Backend (optional/future):
+
+Node.js or Python (FastAPI/Django)
+
+MongoDB / MySQL
+
+State Management:
+
+React Context API
