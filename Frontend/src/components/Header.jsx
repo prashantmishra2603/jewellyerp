@@ -1,11 +1,13 @@
 import React from "react";
-import { UserCircle, LogOut } from "lucide-react";
+import { UserCircle } from "lucide-react";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const handleLogout = () => {
-    localStorage.removeItem("auth");
-    window.location.href = "/login";
+  const navigate = useNavigate();
+
+  const goToReset = () => {
+    navigate("/reset-password");
   };
 
   return (
@@ -18,18 +20,13 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="flex items-center">
+        <div
+          className="flex items-center cursor-pointer hover:opacity-80"
+          onClick={goToReset}
+        >
           <span className="mr-2 text-gray-700">Admin</span>
           <UserCircle className="h-7 w-7 text-gray-600" />
         </div>
-
-        <button
-          onClick={handleLogout}
-          className="flex items-center gap-1 px-3 py-1.5 bg-red-500 text-white rounded hover:bg-red-600"
-        >
-          <LogOut className="h-5 w-5" />
-          Logout
-        </button>
       </div>
     </header>
   );

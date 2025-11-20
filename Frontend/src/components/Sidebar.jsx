@@ -7,14 +7,16 @@ import {
   Database,
   LineChart,
   LogOut,
-} from "lucide-react"; // Changed import
+} from "lucide-react";
 
 // Reusable NavLink component for styling
-const NavItem = ({ to, icon, children }) => {
+const NavItem = ({ to, icon, children, onClick }) => {
   const commonClasses = "flex items-center px-4 py-3 text-gray-700 rounded-lg";
+
   return (
     <NavLink
       to={to}
+      onClick={onClick}
       className={({ isActive }) =>
         `${commonClasses} ${
           isActive
@@ -30,11 +32,18 @@ const NavItem = ({ to, icon, children }) => {
 };
 
 const Sidebar = () => {
+  const handleLogout = () => {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
+      localStorage.removeItem("auth");
+      window.location.href = "/login";
+    }
+  };
+
   return (
     <div className="flex flex-col w-64 bg-white border-r shadow-lg">
       <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
         <nav className="mt-5 flex-1 px-2 space-y-2">
-          {/* Replaced all icons */}
           <NavItem to="/" icon={<LayoutDashboard size={20} />}>
             Dashboard
           </NavItem>
@@ -52,8 +61,13 @@ const Sidebar = () => {
           </NavItem>
         </nav>
       </div>
+
       <div className="p-4 border-t">
-        <NavItem to="/login" icon={<LogOut size={20} />}>
+        <NavItem
+          to="#"
+          icon={<LogOut size={20} />}
+          onClick={handleLogout}
+        >
           Logout
         </NavItem>
       </div>

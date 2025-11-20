@@ -10,11 +10,15 @@ import Billing from "./pages/Billing";
 import Girwi from "./pages/Girwi";
 import Stock from "./pages/Stock";
 import Reports from "./pages/Reports";
+import ResetPassword from "./pages/ResetPassword"; // <-- added
 
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+
+      {/* added route */}
+      <Route path="/reset-password" element={<ResetPassword />} />
 
       <Route
         element={
